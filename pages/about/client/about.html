@@ -1,6 +1,8 @@
 <template name="about">
 <h1>About</h1>
 
+<p>This app will permit people to buy or sale things they have or also donate things they don't need</p>
+
 Here is our team:
 <table class="table table-bordered">
 	<thead>
@@ -8,6 +10,7 @@ Here is our team:
 	</thead>
 	<tbody>
 		{{#each person in team}}
+  		<p>Ricardo, Janikah, Dannie, Awa <p>
   		{{> teamrow t=person}}
 		{{/each}}
 	</tbody>
