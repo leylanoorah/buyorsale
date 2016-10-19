@@ -11,5 +11,10 @@ Template.comments.events({
 
 
 Template.comments.helpers({
+<<<<<<< HEAD:pages/about/client/Comments.js
   commentlist: function(){return Comments.find();}
 })
+=======
+
+})
+>>>>>>> origin/master:pages/comments/client/comments.js
