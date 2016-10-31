@@ -13,19 +13,21 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="{{pathFor 'home'}}">
+		      <a class="btn btn-lg btn-primary" href="{{pathFor 'home'}}">
 		      	Buy or Sell</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      	<!-- Centered Pills -->
 		      	<ul class="nav nav-pills">
-							
+
 							<li><a href="{{pathFor 'buy'}}">Buy</a></li>
 							<li><a href="{{pathFor 'sell'}}">Sell</a></li>
 							<li><a href="{{pathFor 'contact'}}">Contact us</a></li>
 							<li><a href="{{pathFor 'profile'}}">Profile</a></li>
 							<li><a href="{{pathFor 'comments'}}">Comments</a></li>
+	
 				</ul>
 			    <ul class="nav nav- navbar-right">
 			            {{> loginButtons}} <!-- here -->
