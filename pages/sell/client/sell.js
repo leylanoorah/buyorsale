@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-sell.js
-=======
 Template.comments.events({
   "click #submitcomment": function(event){
      console.log("hey we clicked it");
@@ -17,4 +14,4 @@ Template.comments.helpers({
 
   commentlist: function(){return Comments.find();}
 })
->>>>>>> origin/master
+
