@@ -1,17 +1,13 @@
-Template.comments.events({
-  "click #submitcomment": function(event){
-     console.log("hey we clicked it");
-     alert("Thank you for commenting!!");
-     const comment = $("#comment").val();
-     const date = new Date();
-     const jsonobj = {comment:comment, date:date}
-     Comments.insert(jsonobj);
-  }
+Template.sell.events({
+	'submit #sellForm':function(event) {
+		event.preventDefault();
+		const description = $("#description").val();
+		const price = $("#price").val();
+
+		Items.insert({description:description,price:price,seller:Meteor.userId(),sold:false})
+	}
 })
 
-
-Template.comments.helpers({
-
-  commentlist: function(){return Comments.find();}
+Template.sell.helpers({
+	myItems: function() { return Items.find({seller:Meteor.userId()}); }
 })
-

@@ -1,15 +1,15 @@
 Template.register.events({
 	'submit #registerform':function(event) {
 		event.preventDefault();
-		const name = $("#name").val();
-		const password = $("#password").val();
-		const username = $("#username").val();
-		const number = $("#number").val();
-		const email = $("#email").val();
+		const name = $("#InputName").val();
+		const password = $("#InputPassword").val();
+		const number = $("#InputNumber").val();
+		const email = $("#InputEmail").val();
+		const sex = $("#SexSelect").val();
 
-		profile = {name:name,number:number}
+		profile = {name:name,number:number,sex:sex}
 
-		Accounts.createUser({username:username,password:password,email:email,profile:profile}, function(error) {
+		Accounts.createUser({password:password,email:email,profile:profile}, function(error) {
 			console.log("error");
 		});
 
