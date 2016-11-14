@@ -1,9 +1,10 @@
 body {
-	background-color:brown;
-	color:white;
+	background-color:white;
+	color:black;
 }
 
 .navbar {
-	background-color:#3cecf2;
-	border-color:#3cecf2;
+	background-color:#9E0200;
+	border-color:#D10300;
+	
 }
