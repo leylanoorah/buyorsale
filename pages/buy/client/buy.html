@@ -9,6 +9,16 @@
 
 	</div>
 	
+{{#each item in itemsToSell}}
+<div class="col-md-4">
+<img src="{{item.photo}}" height="120"><br>
+{{item.description}} ${{item.price}}<br>
+{{#with item}}
+Vendor: {{sellerName}}<br>
+{{/with}}
+		<button> More info</button>
+</div>
+{{/each}}
 
 <div class="row">
 
