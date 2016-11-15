@@ -5,8 +5,7 @@
   	             <h1> VENDER PAGE</h1>
   	             </div>
   	             {{#if currentUser}}
-  	             <h1> <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQKSdSoRZAWHjbMJSY19JDU9XsgqvOAPtA17rp4lYi8XOMaNwmsag" width="100%" height="190"></h1>
-
+  	             
 
 
 
@@ -25,22 +24,37 @@
 	<br>
 </form>
 
+
 {{#each item in myItems}}
+{{#with item}}
 <div class="col-md-4">
 <img src="{{item.photo}}" height="120"><br>
 {{item.description}} ${{item.price}}<br>
-<button> Edit Price </button>
-		<button> Sold</button>
+<button class="edit"> Edit Price </button>
+<button> Sold</button>
 </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="editModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        New price: <input type="number" value="{{selectedPrice}}" id="editPrice"><br>
+        Description: <input type="text" value="{{selectedDescription}}" id="editDescription"><br>
+        Photo: <input type="text" value="{{selectedPhoto}}" id="editPhoto">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveEdit">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+{{/with}}
 {{/each}}
-
-
 
 
 {{else}}
 <p>You need to be logged in</p>
 {{/if}}
-
-
 
 </template>
