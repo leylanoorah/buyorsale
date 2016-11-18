@@ -67,12 +67,9 @@
 									<li><a href="{{pathFor 'buy'}}">Buy</a></li>
 									{{#if currentUser}}
 									<li><a href="{{pathFor 'sell'}}">Sell</a></li>
-									<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
-										<ul class="dropdown-menu">
-											<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-						
-										</ul>
-									</li>
+	
+									<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+		
 									<li><a href="{{pathFor 'comments'}}">Comments</a></li>
 									<li><a href="#" id="logoutLink">Logout</a></li>
 									{{else}}
