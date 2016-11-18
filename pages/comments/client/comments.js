@@ -1,5 +1,6 @@
 Template.comments.events({
   "click #submitcomment": function(event){
+     event.preventDefault();
      console.log("hey we clicked it");
      alert("Thank you for commenting!!");
      const comment = $("#comment").val();

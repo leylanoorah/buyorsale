@@ -1,5 +1,8 @@
 <template name="profile">
  
 <h2>{{currentUser.profile.name}}'s profile</h2>
-
+<ol>
+<li><a href="{{pathFor 'contact'}}"><H1><b>Contact us</b></H1></a></li>
+<li><a href="{{pathFor 'settings'}}"><H1><b>Settings</b></H1></a></li>
+</ol>
 </template>

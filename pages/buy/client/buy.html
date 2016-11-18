@@ -9,113 +9,28 @@
 
 	</div>
 	
+
 {{#each item in itemsToSell}}
-<div class="col-md-4">
-<img src="{{item.photo}}" height="120"><br>
-{{item.description}} ${{item.price}}<br>
-{{#with item}}
-Vendor: {{sellerName}}<br>
-{{/with}}
-		<button> More info</button>
-		<button> Buy Item </button>
-</div>
-{{/each}}
-
-
 	<div class="col-md-6 ">
 		<div class="itemContent">
-			<img src="images/chembook.jpg" height="150"><br>
-
-			<br>
+			<img src="{{item.photo}}" height="120"><br>
 			<div class="itemDescription">
-			Chemistry Book  <br>
-			Price: $20 <br>
-			Vendor: 105693<br>
+	         {{item.description}} ${{item.price}}
+				<br>
+				
+				{{#with item}}
+				Vendor:{{sellerName}}<br>
+				{{/with}}
 			</div>
-
-			<button> More Info </button>
-
+			<button> More info</button>
+				<button> Buy Item</button>
 			
 		</div>
 	</div>
-
-
-	<div class="col-md-6">
-		<div class="itemContent">
-		<img src="images/applecase.jpg" Height="150"><br>
-		<br>
-		<div class="itemDescription">
-		Iphone 6 case for <br>
-		Price: <br>
-		Vendor: Janikah01<br>
-		</div>
+	{{/each}}
 
 
 
-		<button> More Info </button>
-		</div>
-	</div>
-
-
-	<div class="col-md-6">
-		<div class="itemContent">
-		<img src="images/minifridge.jpg" Height="150"><br>
-		<br>
-		<div class="itemDescription">
-		Mini Fridge <br>
-		Price: $50<br>
-		Vendor:Leyla<br>
-		</div>
-
-		<button>More Info </button>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="itemContent">
-		<img src="images/neuroscience.jpg" height="150"><br>
-		<br>
-		<div class="itemDescription">
-		Chemistry Book <br>
-		Price: $25<br>
-		Vendor: 105693<br>
-		</div>
-
-		<button> More Info </button>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="itemContent">
-		<img src="images/usedbook.jpg" Height="150"><br>
-		<br>
-		<div class="itemDescription">
-		iPhone 7 Case<br>
-		Price: $7<br>
-		Vendor: Janikah01<br>
-        </div>
-
-
-		<button> More Info </button>
-		</div>
-
-	</div>
-
-
-	<div class="col-md-6">
-		<div class="itemContent">
-		<img src="images/desktoplamp.jpg" Height="150"><br>
-		<br>
-		<div class="itemDescription">
-		Desk Lamp<br>
-		Price: FREE<br>
-		Vendor: Leyla<br>
-		</div>
-		
-
-		<button>More Info </button>
-		</div>
-	</div>
 
 
 </template>
