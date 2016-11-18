@@ -1,0 +1,12 @@
+<template name="itemInfo">
+<h1>Item information</h1>
+<img src="{{photo}}" height="200px"> <br>
+<div class="boxed">
+{{description}} for ${{price}}
+</div>
+{{#with itemSeller}}
+{{profile.name}}
+
+Email
+{{/with}}
+</template>

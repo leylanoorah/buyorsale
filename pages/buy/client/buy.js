@@ -6,3 +6,9 @@ Template.buy.helpers({
 		}
 	}
 })
+
+Template.buy.events({
+	'click .moreInfo':function(event) {
+		Router.go('itemInfo',{_id:this._id})
+	}
+})

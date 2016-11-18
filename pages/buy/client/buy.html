@@ -14,16 +14,16 @@
 	<div class="col-md-6 ">
 		<div class="itemContent">
 			<img src="{{item.photo}}" height="120"><br>
+			{{#with item}}
 			<div class="itemDescription">
 	         {{item.description}} ${{item.price}}
 				<br>
 				
-				{{#with item}}
-				Vendor:{{sellerName}}<br>
-				{{/with}}
+				
+				Vendor: {{sellerName}}<br>
+				
 			</div>
-			<button> More info</button>
-				<button> Buy Item</button>
+			<button class="moreInfo"> More info</button>{{/with}}
 			
 		</div>
 	</div>
