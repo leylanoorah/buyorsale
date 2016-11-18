@@ -4,7 +4,7 @@ Template.sell.events({
 		const description = $("#description").val();
 		const price = $("#price").val();
 		const photoLink = $('#photo').val();
-		if (price != '' ** description != '' && photoLink != '') {
+		if (price != '' && description != '' && photoLink != '') {
 			console.log(Meteor.userId());
 			Items.insert({photo:photoLink,description:description,price:price,seller:Meteor.userId(),sold:false})
 		
