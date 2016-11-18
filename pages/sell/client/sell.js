@@ -4,12 +4,18 @@ Template.sell.events({
 		const description = $("#description").val();
 		const price = $("#price").val();
 		const photoLink = $('#photo').val();
-		console.log(Meteor.userId());
-		Items.insert({photo:photoLink,description:description,price:price,seller:Meteor.userId(),sold:false})
-	
-		$('#description').val('');
-		$('#price').val('');
-		$('#photo').val('');
+		if (price != '' ** description != '' && photoLink != '') {
+			console.log(Meteor.userId());
+			Items.insert({photo:photoLink,description:description,price:price,seller:Meteor.userId(),sold:false})
+		
+			$('#description').val('');
+			$('#price').val('');
+			$('#photo').val('');
+		}
+		else {
+			alert('Make sure to fill out everything!');
+		}
+		
 	},
 	'click .edit':function(event) {
 		Session.set("selectedItemEdit",this);
@@ -20,6 +26,9 @@ Template.sell.events({
 	      $set: { price:$('#editPrice').val(), description:$('#editDescription').val(),photo:$('#editPhoto').val() },
 	    });
 	    $('#editModal').modal('toggle');
+	},
+	'click .delete':function(event){
+		Items.remove(this._id);
 	}
 })
 
