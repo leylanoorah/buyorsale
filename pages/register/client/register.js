@@ -7,7 +7,7 @@ Template.register.events({
 		const email = $("#InputEmail").val();
 		const sex = $("#SexSelect").val();
 
-		profile = {name:name,number:number,sex:sex}
+		profile = {name:name,number:number,sex:sex,email:email}
 
 		Accounts.createUser({password:password,email:email,profile:profile}, function(error) {
 			console.log("error");
