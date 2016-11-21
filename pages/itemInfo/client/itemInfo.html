@@ -7,6 +7,11 @@
 {{#with itemSeller}}
 {{profile.name}}
 
-Email
+Emails:
+<ul>
+{{#each e in emails}}
+<li>{{e.address}}</li>
+{{/each}}
+</ul>
 {{/with}}
 </template>
