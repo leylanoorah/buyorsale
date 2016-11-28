@@ -44,21 +44,21 @@
                     <input type="file" id="image-input" onchange="readURL(this);" accept="image/*" disabled class="form-control form-input Profile-input-file" >
                 </div>
                 <div class="col-lg-12 col-md-12">
-                    <input type="text" class="form-control form-input" value="Abhinit Roy" placeholder="Name" disabled id="name">
+                    <input type="text" class="form-control form-input" 
+                    value="{{user.profile.firstname}} {{user.profile.lastname}}" placeholder="Name" id="name">
                     <span class="glyphicon glyphicon-user input-place"></span>
                 </div>
                 <div class="col-lg-12 col-md-12">
-                    <input type="text" class="form-control form-input" value="rgba@gmail.com" placeholder="Email ID" disabled id="email">
+                    <input type="text" class="form-control form-input" 
+                        value="{{user.profile.email}}" placeholder="Email ID" id="email">
                     <span class="glyphicon glyphicon-envelope input-place"></span>
                 </div>
                 <div class="col-lg-12 col-md-12">
-                    <input type="text" class="form-control form-input" value="+91-00000000" placeholder="Phone Number" disabled id="phone">
+                    <input type="text" class="form-control form-input" 
+                          value="{{user.profile.phone}}" placeholder="Phone Number"  id="phone">
                     <span class="glyphicon glyphicon-earphone input-place"></span>
                 </div>
-                <div class="col-lg-12 col-md-12">
-                    <input type="text" class="form-control form-input" value="Chandigarh, India" placeholder="Address" disabled id="place">
-                    <span class="glyphicon glyphicon-map-marker input-place"></span>
-                </div>
+
                 <div class="col-lg-12 col-md-12 text-center">
                     <button class="btn btn-info btn-lg custom-btn" id="submit" disabled><span class="glyphicon glyphicon-save"></span> Save</button>
                 </div>
@@ -133,26 +133,7 @@
 
 
 
-=======
- 
-<h2>{{currentUser.profile.username}}'s profile</h2>
-<br>
-Picture
-<br>
-Name: {{currentUser.profile.name}}
-<br>
-Phone Number: {{currentUser.profile.number}}
-<br>
-Email: {{currentUser.profile.email}}
-<br>
-Sex: {{currentUser.profile.sex}}
-<br>
-Hall on Campus:
-<br>
-Items for Sale:
-<br>
-Items Sold:
->>>>>>> origin/master
+
 
 
 
