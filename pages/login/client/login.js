@@ -1,7 +1,7 @@
 Template.login.events({
 	'submit #loginForm':function(event) {
 		event.preventDefault();
-		Meteor.loginWithPassword($('#InputEmail').val(),$('#InputPassword').val());
+		Meteor.loginWithPassword($('#user').val(),$('#password').val());
 		Router.go('/profile');
 	}
 })
