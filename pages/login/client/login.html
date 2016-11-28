@@ -1,27 +1,42 @@
 <template name="login">
-  <div class="jumbotron">
+ <div class="container">    
+        
+    <div id="loginbox" class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
+        
 
-                 <h1> Login </h1>
+        
+        <div class="panel panel-default" >
+            <div class="panel-heading">
+                <div class="panel-title text-center">Please login</div>
+            </div>     
 
-  </div>
-  
-<form class="form-horizontal" id="loginForm">
-<div class="form-group">
-    <label for="InputEmail" class="col-sm-4 col-offset-sm-4 control-label">Email address</label>
-    <div class="col-sm-4">
-      <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+            <div class="panel-body" >
+
+                <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+                   
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="user" type="text" class="form-control" name="user" value="" placeholder="User">                                        
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                    </div>                                                                  
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
+                        </div>
+                    </div>
+
+                </form>     
+
+            </div>                     
+        </div>  
     </div>
-  </div>
-  <div class="form-group">
-    <label for="InputPassword" class="col-sm-4 col-offset-sm-4 control-label">Password</label>
-    <div class="col-sm-4">
-      <input type="password" class="form-control" id="InputPassword" placeholder="Password">
-      </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-4 col-sm-8">
-    <button type="submit" class="btn btn-default col-offset-sm-4">Submit</button>
-    </div>
-  </div>
-</form>
+</div>
+
+
 </template>
