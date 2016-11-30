@@ -2,7 +2,7 @@ Template.register.events({
 	'submit #registerform':function(event) {
 		event.preventDefault();
 		if ($("#password").val() == $("#password_confirmation").val()) {
-			const firsstname = $("#first_name").val();
+			const firstname = $("#first_name").val();
 			const lastname = $("#last_name").val();
 			const username = $("#display_name").val()
 			const password = $("#password").val();
